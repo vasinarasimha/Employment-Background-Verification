@@ -1,0 +1,123 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.102:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 728-099-097
+127.0.0.1 - - [26/Feb/2026 14:34:19] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:34:34] "GET /api/health HTTP/1.1" 200 -
+D:\Employment Background Verification\backend\app.py:328: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  expires_at=datetime.utcnow() + timedelta(hours=12),
+127.0.0.1 - - [26/Feb/2026 14:35:04] "POST /api/auth/login HTTP/1.1" 200 -
+D:\Employment Background Verification\backend\app.py:211: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  if not auth_token or auth_token.expires_at < datetime.utcnow():
+D:\Employment Background Verification\backend\app.py:214: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  user = User.query.get(auth_token.user_id)
+127.0.0.1 - - [26/Feb/2026 14:35:05] "POST /api/seed HTTP/1.1" 201 -
+127.0.0.1 - - [26/Feb/2026 14:37:06] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [26/Feb/2026 14:37:08] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [26/Feb/2026 14:43:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:43:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:43:06] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [26/Feb/2026 14:43:06] "GET /api/auth/me HTTP/1.1" 401 -
+127.0.0.1 - - [26/Feb/2026 14:44:47] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:48] "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:48] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:48] "OPTIONS /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:48] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:48] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "GET /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "OPTIONS /api/employers/1/steps HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "GET /api/employers/1/steps HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:44:49] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:12] "OPTIONS /api/checks/5 HTTP/1.1" 200 -
+D:\Employment Background Verification\backend\app.py:533: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  check.completed_at = datetime.utcnow()
+127.0.0.1 - - [26/Feb/2026 14:46:12] "PATCH /api/checks/5 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:12] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:13] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:13] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:13] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:13] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:13] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:17] "OPTIONS /api/checks/6 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "PATCH /api/checks/6 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:18] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:19] "OPTIONS /api/checks/8 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:20] "PATCH /api/checks/8 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:20] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:20] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:20] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:23] "OPTIONS /api/checks/7 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "PATCH /api/checks/7 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:46:24] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:47:28] "OPTIONS /api/reports/candidates?start_date=2026-02-25&end_date=2026-02-27&format=xlsx HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:47:29] "GET /api/reports/candidates?start_date=2026-02-25&end_date=2026-02-27&format=xlsx HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:47:53] "OPTIONS /api/reports/candidates?start_date=2026-02-25&end_date=2026-02-27&format=pdf HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 14:47:53] "GET /api/reports/candidates?start_date=2026-02-25&end_date=2026-02-27&format=pdf HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:51] "GET /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "GET /api/auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "GET /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:52] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "OPTIONS /api/employers/1/steps HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/employers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/employers/1/steps HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:28:53] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:26] "OPTIONS /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:26] "GET /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:33] "OPTIONS /api/checks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "PATCH /api/checks/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "OPTIONS /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:34] "GET /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:35] "OPTIONS /api/checks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:35] "PATCH /api/checks/3 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:36] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:36] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:36] "GET /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:39] "OPTIONS /api/checks/4 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:39] "PATCH /api/checks/4 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:39] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:39] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:39] "GET /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:40] "OPTIONS /api/checks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "PATCH /api/checks/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "OPTIONS /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "OPTIONS /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "OPTIONS /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "GET /api/dashboard/summary HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "GET /api/candidates HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:41] "GET /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:50] "OPTIONS /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:51] "GET /api/candidates/2 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:57] "OPTIONS /api/candidates/1 HTTP/1.1" 200 -
+127.0.0.1 - - [26/Feb/2026 17:29:57] "GET /api/candidates/1 HTTP/1.1" 200 -
