@@ -1,0 +1,188 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --primary: #0e4aa8;
+  --primary-soft: #e9f1ff;
+  --danger: #9d2222;
+  --text: #1a2233;
+  --muted: #4e5c78;
+  --border: #d6deec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #eaf2ff, var(--bg) 40%);
+  color: var(--text);
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stats {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.stats article {
+  padding: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.auth-panel {
+  max-width: 420px;
+  margin-top: 1rem;
+}
+
+.stack {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.compact {
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 0.75rem;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.message {
+  margin-top: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.candidate-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.candidate-list button {
+  background: white;
+  color: var(--text);
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 0.15rem;
+}
+
+.candidate-list button.active {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.checks {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+}
+
+.check-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem;
+  background: #fbfdff;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .compact {
+    grid-template-columns: 1fr;
+  }
+}
